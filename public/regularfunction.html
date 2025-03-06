@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <h1>Regular Function</h1>
+
+    <p>The <strong>this</strong> keyword represents different objects
+    depending on how the function wa called.</p>
+
+    <button id="btn">Click Me!</button>
+
+    <p id="demo"></p>
+
+    <p>See the difference before and after the button is clicked.</p>
+<script>
+    class Header {
+        constructor() {
+            this.color = "red;"
+        }
+
+        changeColor = function() {
+            document.getElementById("demo").innerHTML += this;
+        }
+    }
+
+    const myheader = new Header();
+
+    //The window object calls the function:
+    window.addEventListener("load", myheader.changeColor);
+
+    //A button object calls the function:
+    document.getElementById("btn").addEventListener("click", myheader.changeColor);
+</script>
+
+</body>
+</html>

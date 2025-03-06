@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <h1 id="demo"></h1>
+<script>
+    function renderApp() {
+        document.getElementById("demo").innerHTML = "Welcome!";
+    }
+
+    function renderLogin() {
+        document.getElementById("demo").innerHTML = "Please log in";
+    }
+
+    let authenticated = true;
+
+    // if (authenticated) {
+    //     renderApp();
+    // } else {
+    //     renderLogin();
+    // }
+
+    //With ternary
+    authenticated ? renderApp() : renderLogin();
+</script>
+
+    <p>Try changing the "authenticated" variable to false, and run the code to see what happens.</p>
+</body>
+</html>
